@@ -1,30 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <style>
-        .hidden { display: none; }
-    </style>
-    <script>
-        window.onload = function() {
-            var img = new Image();
-            img.src = 'profile.jpg';
-            img.onload = function() {
-                document.getElementById('profile-image').src = 'profile.jpg';
-                document.getElementById('icon').classList.remove('hidden');
-                document.getElementById('text').classList.remove('hidden');
-            };
-            img.onerror = function() {
-                console.error('Image not found.');
-            };
-        };
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Falguni Prasad Nayak - Biodata</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+padding:0;
+font-family:"Roboto", sans-serif;
+background:linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+color:#333;
+line-height:1.6;
+}
+
+.header {
+background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color:white;
+padding:40px 20px;
+text-align:center;
+box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+font-family:"Playfair Display", serif;
+font-size:3rem;
+margin:0;
+font-weight:700;
+text-shadow:2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header p {
+font-size:1.2rem;
+margin:10px 0 0 0;
+opacity:0.9;
+}
+
+.container {
+max-width:1200px;
+margin:0 auto;
+padding:40px 20px;
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:40px;
+align-items:start;
+}
+
+.photo-section {
+text-align:center;
+position:sticky;
+top:20px;
+}
+
+.photo-frame {
+width:300px;
+height:400px;
+border:4px solid #667eea;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+color:#667eea;
+background:#f8f9fa;
+margin:0 auto 20px;
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
+transition:transform 0.3s ease;
+overflow:hidden;
+}
+
+.photo-frame:hover {
+transform:scale(1.05);
+}
+
+.photo-frame img {
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:6px;
+}
+
+.name {
+font-family:"Playfair Display", serif;
+font-size:2rem;
+color:#333;
+margin-bottom:10px;
+}
+
+.contact-info {
+background:white;
+border-radius:10px;
+padding:20px;
+box-shadow:0 4px 6px rgba(0,0,0,0.1);
+margin-top:20px;
+}
+
+.contact-info h3 {
+color:#667eea;
+margin-top:0;
+}
+
+.contact-info p {
+margin:5px 0;
+display:flex;
+align-items:center;
+}
+
+.contact-info i {
+margin-right:10px;
+color:#667eea;
+width:20px;
+}
+
+.details {
+background:white;
+border-radius:10px;
+padding:30px;
+box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+
+.section {
+margin-bottom:40px;
+border-bottom:1px solid #eee;
+padding-bottom:20px;
+}
+
+.section:last-child {
+border-bottom:none;
+}
+
+.section-title {
+font-family:"Playfair Display", serif;
+font-size:1.8rem;
+color:#667eea;
+margin-bottom:15px;
+position:relative;
+}
+
+.section-title::after {
+content:'';
+position:absolute;
+bottom:-5px;
+left:0;
+width:50px;
+height:3px;
+background:#667eea;
+}
+
+table {
+width:100%;
+border-collapse:collapse;
+}
+
+td {
+padding:12px 0;
+border-bottom:1px solid #f0f0f0;
+vertical-align:top;
+}
+
+.label {
+font-weight:600;
+width:40%;
+color:#555;
+font-size:1rem;
+}
+
+.value {
+color:#333;
+font-size:1rem;
+}
+
+.footer {
+background:#333;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+border-radius:10px 10px 0 0;
+}
+
+.footer p {
+margin:0;
+font-size:0.9rem;
+}
+
+@media (max-width:768px) {
+.container {
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.photo-frame {
+width:250px;
+height:330px;
+}
+
+.header h1 {
+font-size:2.5rem;
+}
+
+.header p {
+font-size:1rem;
+}
+}
+
+</style>
+
 </head>
 <body>
-    <img id="profile-image" src="profile.jpg" alt="Profile Photo">
-    <div id="icon" class="hidden">Icon Here</div>
-    <div id="text" class="hidden">Text Here</div>
+
+<div class="header">
+<h1>Falguni Prasad Nayak</h1>
+<p>Advocate | Legal Professional</p>
+</div>
+
+<div class="container">
+
+<div class="photo-section">
+<div class="photo-frame" onclick="document.getElementById('photo-upload').click()">
+<img id="profile-photo" src="profile.jpg" alt="Profile Photo" style="width:100%; height:100%; object-fit:cover; border-radius:6px;">
+<i class="fas fa-user-circle" id="photo-icon" style="font-size:80px; color:#667eea; display:none;"></i>
+<span id="photo-text" style="display:none;">Click to Upload Photo</span>
+</div>
+<input type="file" id="photo-upload" accept="image/*" style="display:none;" onchange="loadPhoto(event)">
+<div class="name">Falguni Prasad Nayak</div>
+
+<div class="contact-info">
+<h3><i class="fas fa-address-card"></i> Contact Information</h3>
+<p><i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha</p>
+<p><i class="fas fa-birthday-cake"></i> February 2, 1999</p>
+<p><i class="fas fa-ruler-vertical"></i> 5 ft 10 in</p>
+<p><i class="fas fa-tint"></i> O+ Blood Group</p>
+</div>
+</div>
+
+<div class="details">
+
+<div class="section">
+<h2 class="section-title">Personal Details</h2>
+<table>
+<tr><td class="label">Date of Birth:</td><td class="value">2 February 1999</td></tr>
+<tr><td class="label">Time of Birth:</td><td class="value">5:00 AM</td></tr>
+<tr><td class="label">Place of Birth:</td><td class="value">Bhubaneswar</td></tr>
+<tr><td class="label">Zodiac Sign:</td><td class="value">Leo</td></tr>
+<tr><td class="label">Complexion:</td><td class="value">Wheatish</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2 class="section-title">Education & Profession</h2>
+<table>
+<tr><td class="label">Education:</td><td class="value">B.Sc Chemistry (Hons), LLB</td></tr>
+<tr><td class="label">Occupation:</td><td class="value">Advocate</td></tr>
+<tr><td class="label">Professional Experience:</td><td class="value">Practicing Advocate with expertise in legal matters</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2 class="section-title">Family Details</h2>
+<table>
+<tr><td class="label">Father's Name:</td><td class="value">Benudhar Nayak</td></tr>
+<tr><td class="label">Father's Occupation:</td><td class="value">Planning Cell, BMC, Bhubaneswar</td></tr>
+<tr><td class="label">Mother's Name:</td><td class="value">Sandhyarani Nayak</td></tr>
+<tr><td class="label">Mother's Occupation:</td><td class="value">Teacher</td></tr>
+<tr><td class="label">Siblings:</td><td class="value">One Brother</td></tr>
+</table>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+<p>&copy; Falguni Prasad Nayak. All rights reserved.</p>
+</div>
+
+<script>
+function loadPhoto(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('profile-photo').src = e.target.result;
+            document.getElementById('profile-photo').style.display = 'block';
+            document.getElementById('photo-icon').style.display = 'none';
+            document.getElementById('photo-text').style.display = 'none';
+        };
+        reader.readAsDataURL(file);
+    }
+}
+</script>
+
 </body>
 </html>
