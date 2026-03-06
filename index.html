@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Falguni Prasad Nayak | Biodata</title>
+<title>Falguni Prasad Nayak - Biodata</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
+margin:0;
 font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#e6ecf0,#f7f9fb);
+background:linear-gradient(135deg,#eef2f3,#dfe9f3);
 color:#333;
 }
 
@@ -30,24 +23,18 @@ color:#333;
 .header{
 background:linear-gradient(135deg,#2c3e50,#4ca1af);
 color:white;
+padding:50px 20px;
 text-align:center;
-padding:55px 20px;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
 .header h1{
 font-family:'Playfair Display',serif;
 font-size:3rem;
-letter-spacing:1px;
+margin:0;
 }
 
-.header p{
-opacity:0.9;
-margin-top:10px;
-font-size:1.1rem;
-}
-
-/* MAIN CONTAINER */
+/* CONTAINER */
 
 .container{
 max-width:1100px;
@@ -64,15 +51,10 @@ padding:0 20px;
 width:280px;
 height:360px;
 margin:auto;
-border-radius:14px;
+border-radius:15px;
 overflow:hidden;
-border:6px solid white;
 box-shadow:0 15px 40px rgba(0,0,0,0.25);
-transition:0.4s;
-}
-
-.photo-frame:hover{
-transform:scale(1.03);
+border:5px solid white;
 }
 
 .photo-frame img{
@@ -82,39 +64,46 @@ object-fit:cover;
 }
 
 .name{
-text-align:center;
 font-family:'Playfair Display',serif;
 font-size:1.8rem;
-margin-top:18px;
+margin-top:15px;
+text-align:center;
 }
 
-/* CARD */
+/* CARD STYLE */
 
 .card{
 background:white;
-padding:22px;
+padding:20px;
 border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
 margin-top:20px;
 }
 
 .card h3{
-font-size:1.2rem;
-margin-bottom:10px;
+margin-top:0;
 border-bottom:2px solid #eee;
 padding-bottom:8px;
 color:#2c3e50;
 }
 
-.card p{
-margin:10px 0;
+/* CONTACT */
+
+.contact p{
 display:flex;
 align-items:center;
+margin:10px 0;
 }
 
-.card i{
-color:#4ca1af;
+.contact i{
 margin-right:10px;
+color:#4ca1af;
+}
+
+/* BASIC INFO */
+
+.basic p{
+margin:8px 0;
 }
 
 /* DETAILS */
@@ -123,7 +112,7 @@ margin-right:10px;
 background:white;
 padding:35px;
 border-radius:12px;
-box-shadow:0 12px 30px rgba(0,0,0,0.1);
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 .section{
@@ -134,11 +123,9 @@ margin-bottom:35px;
 font-family:'Playfair Display',serif;
 font-size:1.7rem;
 margin-bottom:15px;
-padding-left:12px;
 border-left:5px solid #4ca1af;
+padding-left:10px;
 }
-
-/* TABLE */
 
 table{
 width:100%;
@@ -152,183 +139,107 @@ border-bottom:1px solid #eee;
 
 .label{
 font-weight:600;
-color:#555;
 width:40%;
+color:#555;
 }
 
-/* FOOTER */
-
 .footer{
-margin-top:40px;
 background:#2c3e50;
 color:white;
 text-align:center;
 padding:18px;
-font-size:0.9rem;
+margin-top:40px;
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
-
 .container{
 grid-template-columns:1fr;
 }
-
-.photo-frame{
-width:220px;
-height:300px;
-}
-
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <div class="header">
-
 <h1>Falguni Prasad Nayak</h1>
 <p>Advocate | Legal Professional</p>
-
 </div>
-
-<!-- MAIN CONTENT -->
 
 <div class="container">
 
-<!-- LEFT COLUMN -->
+<!-- LEFT SIDE -->
 
 <div>
 
 <div class="photo-frame">
-<img src="photo.jpg" alt="Falguni Prasad Nayak">
+<img src="photo.jpeg">
 </div>
 
 <div class="name">Falguni Prasad Nayak</div>
 
-<!-- CONTACT -->
+<!-- CONTACT CARD -->
 
-<div class="card">
-
-<h3><i class="fas fa-phone"></i> Contact</h3>
+<div class="card contact">
+<h3><i class="fas fa-phone"></i> Contact Details </h3>
 
 <p><i class="fas fa-phone"></i> 9658965813</p>
 
 </div>
 
-<!-- BASIC INFO -->
+<!-- BASIC INFO CARD -->
 
-<div class="card">
-
+<div class="card basic">
 <h3><i class="fas fa-user"></i> Basic Information</h3>
 
-<p><i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha</p>
-
-<p><i class="fas fa-birthday-cake"></i> 2 February 1999</p>
-
-<p><i class="fas fa-ruler-vertical"></i> 5 ft 10 in</p>
-
-<p><i class="fas fa-tint"></i> O+ Blood Group</p>
+<p><b>Location:</b> Bhubaneswar, Odisha</p>
+<p><b>Height:</b> 5 ft 10 in</p>
+<p><b>Blood Group:</b> O+</p>
 
 </div>
 
 </div>
 
-<!-- RIGHT COLUMN -->
+<!-- RIGHT SIDE DETAILS -->
 
 <div class="details">
 
 <div class="section">
-
 <div class="section-title">Personal Details</div>
 
 <table>
-
-<tr>
-<td class="label">Time of Birth</td>
-<td>5:00 AM</td>
-</tr>
-
-<tr>
-<td class="label">Place of Birth</td>
-<td>Bhubaneswar</td>
-</tr>
-
-<tr>
-<td class="label">Zodiac Sign</td>
-<td>Leo</td>
-</tr>
-
-<tr>
-<td class="label">Complexion</td>
-<td>Wheatish</td>
-</tr>
-
+<tr><td class="label">Date of Birth</td><td>2 February 1999</td></tr>
+<tr><td class="label">Time of Birth</td><td>5:00 AM</td></tr>
+<tr><td class="label">Place of Birth</td><td>Bhubaneswar</td></tr>
+<tr><td class="label">Zodiac Sign</td><td>Leo</td></tr>
+<tr><td class="label">Complexion</td><td>Wheatish</td></tr>
 </table>
 
 </div>
 
 <div class="section">
-
 <div class="section-title">Education & Profession</div>
 
 <table>
-
-<tr>
-<td class="label">Education</td>
-<td>B.Sc Chemistry (Hons), LLB</td>
-</tr>
-
-<tr>
-<td class="label">Occupation</td>
-<td>Advocate</td>
-</tr>
-
-<tr>
-<td class="label">Experience</td>
-<td>Practicing Advocate with expertise in legal matters</td>
-</tr>
-
+<tr><td class="label">Education</td><td>B.Sc Chemistry (Hons), LLB</td></tr>
+<tr><td class="label">Occupation</td><td>Advocate</td></tr>
+<tr><td class="label">Experience</td><td>Practicing Advocate with expertise in legal matters</td></tr>
 </table>
 
 </div>
 
 <div class="section">
-
 <div class="section-title">Family Details</div>
 
 <table>
-
-<tr>
-<td class="label">Father</td>
-<td>Benudhar Nayak</td>
-</tr>
-
-<tr>
-<td class="label">Father's Occupation</td>
-<td>Planning Cell, BMC, Bhubaneswar</td>
-</tr>
-
-<tr>
-<td class="label">Mother</td>
-<td>Sandhyarani Nayak</td>
-</tr>
-
-<tr>
-<td class="label">Mother's Occupation</td>
-<td>Teacher</td>
-</tr>
-
-<tr>
-<td class="label">Siblings</td>
-<td>One Brother</td>
-</tr>
-
+<tr><td class="label">Father</td><td>Benudhar Nayak</td></tr>
+<tr><td class="label">Father's Occupation</td><td>Planning Cell, BMC, Bhubaneswar</td></tr>
+<tr><td class="label">Mother</td><td>Sandhyarani Nayak</td></tr>
+<tr><td class="label">Mother's Occupation</td><td>Teacher</td></tr>
+<tr><td class="label">Siblings</td><td>One Brother</td></tr>
 </table>
 
 </div>
@@ -337,15 +248,9 @@ height:300px;
 
 </div>
 
-<!-- FOOTER -->
-
 <div class="footer">
-
 © Falguni Prasad Nayak | Biodata
-
 </div>
 
 </body>
-
 </html>
-```
